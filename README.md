@@ -1,11 +1,21 @@
+ #-------------------------------------------------------------------------------------
+ # Script: CheckFolderACLs.ps1
+ # Author: tpez0
+ # Notes : No warranty expressed or implied.
+ #         Use at your own risk.
+ #         Download Remote Server Administration Tools for Win10 https://www.microsoft.com/en-us/download/details.aspx?id=45520
+ # Function: This tool list all permissions for a user or group on a given folder structure   
+ #           Only directories are analyzed, not individual files. 
+ #--------------------------------------------------------------------------------------
+ 
 Why CheckFolderACLs.ps1:
 
-    CheckFolderACLs simplifies the ACLs managing listing all permissions for a user or group on a given folder structure. Only directories are analyzed, not individual files.
+   CheckFolderACLs simplifies the ACLs managing listing all permissions for a user or group on a given folder structure. Only directories are analyzed, not individual files.
 
 What to install:
 
-    To use CheckFolderACLs.ps1 you only need to download and install Remote Server Administration Tools for Win10 
-    https://www.microsoft.com/en-us/download/details.aspx?id=45520
+   To use CheckFolderACLs.ps1 you only need to download and install Remote Server Administration Tools for Win10 
+   https://www.microsoft.com/en-us/download/details.aspx?id=45520
 
 How to use CheckFolderACLs.ps1:
 
