@@ -14,7 +14,7 @@ Write-Host " "
 Write-Host "*************************************************************************" -ForegroundColor Yellow
 Write-Host "* Script: CheckFolderACLs.ps1                                           *" -ForegroundColor Yellow
 Write-Host "* Author: tpez0                                                         *" -ForegroundColor Yellow
-Write-Host "* Lists all permissions for a user or group on a given folder structure *" -ForegroundColor Yellow
+Write-Host "* List all permissions for a user or group on a given folder structure  *" -ForegroundColor Yellow
 Write-Host "* Only directories are analyzed, not individual files.                  *" -ForegroundColor Yellow
 Write-Host "*                                                                       *" -ForegroundColor Yellow
 Write-Host "*************************************************************************" -ForegroundColor Yellow
@@ -41,7 +41,7 @@ if (Get-ADUser -Filter "sAMAccountName -eq '$src'") {
     Write-Host "*************************************************************************" -ForegroundColor Yellow
     Write-Host "* Script: CheckFolderACLs.ps1                                           *" -ForegroundColor Yellow
     Write-Host "* Author: tpez0                                                         *" -ForegroundColor Yellow
-    Write-Host "* Lists all permissions for a user or group on a given folder structure *" -ForegroundColor Yellow
+    Write-Host "* List all permissions for a user or group on a given folder structure  *" -ForegroundColor Yellow
     Write-Host "* Only directories are analyzed, not individual files.                  *" -ForegroundColor Yellow
     Write-Host "*                                                                       *" -ForegroundColor Yellow
     Write-Host "* Path: $Folder" -ForegroundColor Yellow
@@ -94,7 +94,7 @@ if (Get-ADUser -Filter "sAMAccountName -eq '$src'") {
         Write-Host "*************************************************************************" -ForegroundColor Yellow
         Write-Host "* Script: CheckFolderACLs.ps1                                           *" -ForegroundColor Yellow
         Write-Host "* Author: tpez0                                                         *" -ForegroundColor Yellow
-        Write-Host "* Lists all permissions for a user or group on a given folder structure *" -ForegroundColor Yellow
+        Write-Host "* List all permissions for a user or group on a given folder structure  *" -ForegroundColor Yellow
         Write-Host "* Only directories are analyzed, not individual files.                  *" -ForegroundColor Yellow
         Write-Host "*                                                                       *" -ForegroundColor Yellow
         Write-Host "* Path: $Folder" -ForegroundColor Yellow
