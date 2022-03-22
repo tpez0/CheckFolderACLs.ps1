@@ -1,6 +1,6 @@
  #-------------------------------------------------------------------------------------
  # Script: CheckFolderACLs.ps1
- # Author: tpez
+ # Author: tpez0
  # Notes : No warranty expressed or implied.
  #         Use at your own risk.
  #         Download Remote Server Administration Tools for Win10 https://www.microsoft.com/en-us/download/details.aspx?id=45520
@@ -11,11 +11,13 @@ import-module ActiveDirectory
 
 cls
 Write-Host " "
-Write-Host "*******************************************************************" -ForegroundColor Yellow
-Write-Host "* This tool lists all permissions for a user or group on a given folder structure *" -ForegroundColor Yellow
-Write-Host "* Only directories are analyzed, not individual files. " -ForegroundColor Yellow
-Write-Host " "
-Write-Host "*******************************************************************" -ForegroundColor Yellow
+Write-Host "*************************************************************************" -ForegroundColor Yellow
+Write-Host "* Script: CheckFolderACLs.ps1                                           *" -ForegroundColor Yellow
+Write-Host "* Author: tpez0                                                         *" -ForegroundColor Yellow
+Write-Host "* Lists all permissions for a user or group on a given folder structure *" -ForegroundColor Yellow
+Write-Host "* Only directories are analyzed, not individual files.                  *" -ForegroundColor Yellow
+Write-Host "*                                                                       *" -ForegroundColor Yellow
+Write-Host "*************************************************************************" -ForegroundColor Yellow
 Write-Host " "
 
 $Folder = Read-Host -Prompt "Enter the path" 
@@ -36,15 +38,17 @@ if (Get-ADUser -Filter "sAMAccountName -eq '$src'") {
     $srcUser = $src
 
     Write-Host " "
-    Write-Host "*******************************************************************" -ForegroundColor Yellow
-    Write-Host " Loading Folders for given user and path: " -ForegroundColor Yellow
-    Write-Host " "
-    Write-Host " "
-    Write-Host " Path: $Folder" -ForegroundColor Yellow
-    Write-host " AD User: $srcUser" -ForegroundColor Yellow
-    Write-host " Subfolder depth: $depth" -ForegroundColor Yellow
-    Write-Host " "
-    Write-Host "*******************************************************************" -ForegroundColor Yellow
+    Write-Host "*************************************************************************" -ForegroundColor Yellow
+    Write-Host "* Script: CheckFolderACLs.ps1                                           *" -ForegroundColor Yellow
+    Write-Host "* Author: tpez0                                                         *" -ForegroundColor Yellow
+    Write-Host "* Lists all permissions for a user or group on a given folder structure *" -ForegroundColor Yellow
+    Write-Host "* Only directories are analyzed, not individual files.                  *" -ForegroundColor Yellow
+    Write-Host "*                                                                       *" -ForegroundColor Yellow
+    Write-Host "* Path: $Folder" -ForegroundColor Yellow
+    Write-host "* AD User: $srcUser" -ForegroundColor Yellow
+    Write-host "* Subfolder depth: $depth" -ForegroundColor Yellow
+    Write-Host "*                                                                       *" -ForegroundColor Yellow
+    Write-Host "*************************************************************************" -ForegroundColor Yellow
     Write-Host " "
     $Username = $env:userdomain + '\' + $srcUser
     if ($Username -match '.v[1-8]') { 
@@ -52,6 +56,7 @@ if (Get-ADUser -Filter "sAMAccountName -eq '$src'") {
     }
     $FoldersArray = Get-ChildItem $Folder -Directory -Depth $depth
     $Path = $Folder
+    #$Path
 
     for ($i = 0; $i -lt $FoldersArray.length; $i++){
         $Path = $FoldersArray.GetValue($i).FullName
@@ -86,15 +91,17 @@ if (Get-ADUser -Filter "sAMAccountName -eq '$src'") {
         $srcGroup = $env:userdomain + '\' + $src
 
         Write-Host " "
-        Write-Host "*******************************************************************" -ForegroundColor Yellow
-        Write-Host " Loading Folders for given group and path: " -ForegroundColor Yellow
-        Write-Host " "
-        Write-Host " "
-        Write-Host " Path: $Folder" -ForegroundColor Yellow
-        Write-host " AD Group: $srcGroup" -ForegroundColor Yellow
-        Write-host " Subfolder depth: $depth" -ForegroundColor Yellow
-        Write-Host " "
-        Write-Host "*******************************************************************" -ForegroundColor Yellow
+        Write-Host "*************************************************************************" -ForegroundColor Yellow
+        Write-Host "* Script: CheckFolderACLs.ps1                                           *" -ForegroundColor Yellow
+        Write-Host "* Author: tpez0                                                         *" -ForegroundColor Yellow
+        Write-Host "* Lists all permissions for a user or group on a given folder structure *" -ForegroundColor Yellow
+        Write-Host "* Only directories are analyzed, not individual files.                  *" -ForegroundColor Yellow
+        Write-Host "*                                                                       *" -ForegroundColor Yellow
+        Write-Host "* Path: $Folder" -ForegroundColor Yellow
+        Write-host "* AD Group: $srcGroup" -ForegroundColor Yellow
+        Write-host "* Subfolder depth: $depth" -ForegroundColor Yellow
+        Write-Host "*                                                                       *"
+        Write-Host "*************************************************************************" -ForegroundColor Yellow
         Write-Host " "
 
         $FoldersArray = Get-ChildItem $Folder -Directory -Depth $depth
